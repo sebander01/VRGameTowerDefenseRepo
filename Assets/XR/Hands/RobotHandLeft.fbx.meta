@@ -2,7 +2,28 @@ fileFormatVersion: 2
 guid: e4dc5011f0243184d9a7d72b728617cb
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 1417378678486720015
+    second: Armature.001|ClosedFist
+  - first:
+      74: -9109197457067442206
+    second: Armature.001|FingerGuns
+  - first:
+      74: 2639735063582692945
+    second: Armature.001|MiddleFinger
+  - first:
+      74: 7493313104541265373
+    second: Armature.001|Pinch
+  - first:
+      74: 2303715929229829682
+    second: Armature.001|Pinch.001
+  - first:
+      74: 2921217121951745996
+    second: Armature.001|Relaxed
+  - first:
+      74: 6056545028902110650
+    second: Armature.001|Relaxed.001
   externalObjects: {}
   materials:
     materialImportMode: 2
