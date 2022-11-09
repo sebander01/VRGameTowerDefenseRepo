@@ -78,7 +78,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _ElecScale: 90
+    - _ElecScale: 70
     - _ElectricityTotal: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
