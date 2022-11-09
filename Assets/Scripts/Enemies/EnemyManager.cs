@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     public Transform player;
     private Transform _player;
 
     private IMoveable _movementLogic;
     private IDamageable _healthLogic;
     private IAttackable _attackLogic;
-    
+
     private void Awake()
     {
         //Move this init call to some kind of wave manager
@@ -36,7 +37,7 @@ public class EnemyManager : MonoBehaviour
             if (!Physics.Raycast(transform.position, directionToTarget, out RaycastHit result)) return;
             if (result.collider.transform != player) return;
             
-            _movementLogic.MoveTowardsTarget(_player);
+            _movementLogic.MoveTowardsTarget(_player, animator);
             _attackLogic.AttackTarget(player);
         }
         else

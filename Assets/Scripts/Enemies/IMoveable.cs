@@ -2,5 +2,5 @@
 
 public interface IMoveable
 {
-    public void MoveTowardsTarget(Transform player);
+    public void MoveTowardsTarget(Transform player, Animator animator);
 }

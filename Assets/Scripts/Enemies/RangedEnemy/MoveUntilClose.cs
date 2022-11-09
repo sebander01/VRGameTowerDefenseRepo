@@ -15,11 +15,12 @@ public class MoveUntilClose : MonoBehaviour, IMoveable
         _agent.speed = speed;
     }
 
-    public void MoveTowardsTarget(Transform player)
+    public void MoveTowardsTarget(Transform player, Animator animator)
     {
         Vector3 directionToPlayer = player.position - transform.position;
 
         transform.forward = directionToPlayer.normalized;
         _agent.SetDestination(transform.position + (directionToPlayer - directionToPlayer.normalized * distance));
+        animator.SetBool("IsMoving", _agent.speed > 0);
     }
 }
