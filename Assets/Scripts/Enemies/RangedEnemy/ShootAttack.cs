@@ -7,6 +7,7 @@ public class ShootAttack : MonoBehaviour, IAttackable
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireRate;
+    [SerializeField] private AudioClip fireSound;
 
     private float _timeSinceLastShot;
     
@@ -22,6 +23,7 @@ public class ShootAttack : MonoBehaviour, IAttackable
         if (!(directionToTarget.magnitude <= range)) return;
         if (!(Time.realtimeSinceStartup >= _timeSinceLastShot + 1 / fireRate)) return;
 
+        AudioSource.PlayClipAtPoint(fireSound, firePoint.position, 20);
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = firePoint.position;
         spawnedBullet.GetComponent<Rigidbody>().AddForce(directionToTarget * bulletSpeed);
