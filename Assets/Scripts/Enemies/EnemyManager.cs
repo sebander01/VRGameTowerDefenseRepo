@@ -13,20 +13,13 @@ public class EnemyManager : MonoBehaviour
     private IDamageable _healthLogic;
     private IAttackable _attackLogic;
 
-    private void Awake()
+    public void Init(Transform player)
     {
-        //Move this init call to some kind of wave manager
-        Init(player);
+        _player = player;
         
         _movementLogic = GetComponent<IMoveable>();
         _healthLogic = GetComponent<IDamageable>();
         _attackLogic = GetComponent<IAttackable>();
-    }
-
-    //Call to give the script a reference to the player, probs from the wave manager when you spawn it 
-    void Init(Transform player)
-    {
-        _player = player;
     }
 
     void Update()
