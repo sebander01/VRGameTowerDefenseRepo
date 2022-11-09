@@ -80,7 +80,7 @@ Material:
     - _ZWrite: 1
     - _electricity_ammount: 1
     m_Colors:
-    - _Color: {r: 0.55375576, g: 0.6415094, b: 0.6158319, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _ElecSoeed: {r: 0, g: 0.5, b: 0, a: 0}
     - _ElectSpeed2: {r: 0.5, g: -0.5, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
