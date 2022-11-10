@@ -37,7 +37,6 @@ public class Rounds : MonoBehaviour
             
             int spawn_pos = Random.Range(0, spawn_points.Length - 1);
             GameObject spawnedEnemy = Instantiate(_Rounds[round_counter].GetComponent<WaveInfo>().enemy[wave_counter], spawn_points[spawn_pos].transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
-            spawnedEnemy.GetComponent<EnemyManager>().Init(player);
             wave_spawn_counter++;
 
             if (wave_spawn_counter > _Rounds[round_counter].GetComponent<WaveInfo>().enemy_count[wave_counter])
